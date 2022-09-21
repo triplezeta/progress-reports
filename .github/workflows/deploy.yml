@@ -21,11 +21,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       - name: Generate html
-        run: python3 main.py
-      - name: Push html
         run: |
+          ~/output
           touch output/.nojekyll
           echo progress.shiptest.net > output/CNAME
+          python3 main.py
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
