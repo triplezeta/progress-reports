@@ -22,7 +22,6 @@ jobs:
           pip install -r requirements.txt
       - name: Generate html
         run: |
-          ~/output
           touch output/.nojekyll
           echo progress.shiptest.net > output/CNAME
           python3 main.py
